@@ -1,0 +1,36 @@
+/* slightly rounded borders
+spaced by 2em on either side and centered
+grey border
+lighter grey background
+*/
+
+.new-tweet {
+
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-bottom: 2em;
+
+  background-color: rgba(211, 211, 211, 0.09);
+  border-color: rgba(112, 128, 144, 0.43);
+  border-style: groove;
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.new-tweet h2:after {
+    content:' ';
+    display:block;
+    border:0.5px solid black;
+}
+
+.new-tweet form textarea {
+  width: 100%;
+  padding: 5px;
+}
+
+.new-tweet .counter {
+    display: block;
+    float: right;
+    padding: 5px;
+}
+

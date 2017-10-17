@@ -24,3 +24,12 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+ main {
+  width: 450px;
+  background-color: white;
+/* centred to body */
+  margin: auto;
+  padding-top: 140px;
+  padding-bottom: 1em;
+ }
