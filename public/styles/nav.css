@@ -11,3 +11,16 @@
     padding-top: 0px;
     padding-bottom: 0px;
 }
+
+#nav-bar .logo {
+  float: left;
+  height: 80px;
+  width: 80px;
+}
+
+#nav-bar .header{
+  float: left;
+  font-size: 2em;
+  padding-left: 10px;
+  line-height: 80px;
+}
