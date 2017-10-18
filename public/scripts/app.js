@@ -24,26 +24,69 @@ $(document).ready(function () {
   }
 
   function createTweetElement(tweetData) {
-    var tweet = $("<article>");
-    var header = tweet.append("<header class='tweet-header'></header>");
-    var message = tweet.append("<div class='tweet-message'><div>");
-    var footer = tweet.append("<footer class='tweet-footer'></footer>");
-
-    //Appending nodes inside main parents:
-    header.append("<div class='handle'></div>").text(tweetData.user.handle);
-    //header.append("<img class='avatar' src='')
-    //tweet.(".tweet-header").appendClass("handle").appendChild(tweetData.user.handle);
-    //tweet.(".tweet-header").appendClass("avatar").appendChild(src=tweetData.user.avatars.regular);
-    //tweet.(".tweet-header").appendClass("display-name").appendChild(tweetData.user.name);
-    return tweet;
-
+    return $("<article>", {
+      "class": "tweet",
+      html: [
+        $("<header>", {
+          "class": "tweet-header",
+          html: [
+            $("<div>", {
+              "class": "handle",
+              text: tweetData.user.handle
+            }),
+            $("<img>", {
+              "class": "avatar",
+               src: tweetData.user.avatars.regular
+            }),
+            $("<div>", {
+              "class": "display-name",
+              text: tweetData.user.name
+            })
+          ]
+        }),
+        $("<div>", {
+          "class": "tweet-message",
+          html: [
+            $("<p>", {
+              text: tweetData.content.text
+            })
+          ]
+        }),
+        $("<footer>", {
+          "class": "tweet-footer",
+          html: [
+            $("<aside>", {
+              "class": "interact",
+              html: [
+                $("<img>", {
+                  "class": "flag",
+                  src: "/images/flag.png"
+                }),
+                $("<img>", {
+                  "class": "share",
+                  src: "/images/share.png"
+                }),
+                $("<img>", {
+                  "class": "like",
+                  src: "/images/like.png"
+                })
+              ]
+            }),
+            $("<div>", {
+              "class": "age",
+              text: tweetData.created_at + " days ago"
+            })
+          ]
+        })
+      ]
+    });
   }
 
   var $tweet = createTweetElement(tweetData);
 
   // Test / driver code (temporary)
   console.log($tweet); // to see what it looks like
-  $('#tweets-container').append($tweet); // to add it to the page so we can make
+  $('#tweet-storage').append($tweet); // to add it to the page so we can make
   //sure it's got all the right elements, classes, etc.
 
 
