@@ -30,7 +30,7 @@ $(document).ready(function () {
     var footer = tweet.append("<footer class='tweet-footer'></footer>");
 
     //Appending nodes inside main parents:
-    header.append("<div class='handle'>${tweetData.user.handle}</div>");
+    header.append("<div class='handle'></div>").text(tweetData.user.handle);
     //header.append("<img class='avatar' src='')
     //tweet.(".tweet-header").appendClass("handle").appendChild(tweetData.user.handle);
     //tweet.(".tweet-header").appendClass("avatar").appendChild(src=tweetData.user.avatars.regular);
