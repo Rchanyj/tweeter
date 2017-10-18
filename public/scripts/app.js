@@ -124,15 +124,38 @@ $(document).ready(function () {
   }
 
 
-//New test code:
-  renderTweets(data);
+  //New test code:
+  //  renderTweets(data);
 
-  //var $tweet = createTweetElement(tweetData);
+    //var $tweet = createTweetElement(tweetData);
 
-  // Test / driver code (temporary)
- // console.log($tweet); // to see what it looks like
- // $('#tweet-storage').append($tweet); // to add it to the page so we can make
-  //sure it's got all the right elements, classes, etc.
+    // Test / driver code (temporary)
+   // console.log($tweet); // to see what it looks like
+   // $('#tweet-storage').append($tweet); // to add it to the page so we can make
+    //sure it's got all the right elements, classes, etc.
+
+  //Submit tweets
+  $(".container form").on("submit", function(event) {
+    //Prevent default submit behaviour
+    event.preventDefault();
+    //submit request using Ajax
+    var tweetform = this;
+    //turn entry into query string
+    var entry = $(this).serialize();
+    $.ajax({
+      method: "post",
+      url: "/tweets",
+      data: entry
+    }).done(function () {
+      //reset the form
+      tweetform.reset();
+      renderTweets(data);
+    });
+  });
+
+
+
 
 
 })
+
