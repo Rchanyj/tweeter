@@ -1,10 +1,10 @@
 /* Normal tweet page appearance
  Want the same dimensions as the tweet box;
+ Add hover states for elements that require it
 */
 
 
 article {
-
   width: 450px;
   background-color: white;
 /* centred to body */
@@ -15,7 +15,10 @@ article {
   border-color: rgba(112, 128, 144, 0.43);
   border-style: groove;
   border-radius: 10px;
+}
 
+article:hover {
+  border-color: rgba(0, 0, 0, 0.49);
 }
 
 .tweet-header {
@@ -38,6 +41,10 @@ article {
   color: #0c6388;
 }
 
+article:hover .tweet-header .display-name {
+  color: #0b4863;
+}
+
 .tweet-header .handle {
   float: right;
   text-align: right;
@@ -46,6 +53,10 @@ article {
   font-weight: lighter;
   padding-top: 5px;
   padding-right: 5px;
+}
+
+article:hover .tweet-header .handle {
+  color: grey;
 }
 
 article .tweet-message {
@@ -66,3 +77,51 @@ article .tweet-message {
   padding-top: 10px;
   padding-left: 10px;
 }
+
+.tweet-footer .interact {
+  visibility: hidden;
+  display: block;
+  padding-top: 10px;
+  padding-right: 5px;
+  height: 30px;
+  width: 16%;
+  float: right;
+}
+
+article:hover .tweet-footer .interact {
+  visibility: visible;
+}
+
+
+/*<img class="like" src="/images/like.png">*/
+.tweet-footer .like {
+  float: right;
+  height: 20px;
+  width: 20px;
+}
+
+/*<img class="share" src="/images/share.png">*/
+.tweet-footer .share {
+  float: none;
+  height: 20px;
+  width: 20px;
+}
+
+/*<img class="flag" src="/images/flag.png">*/
+.tweet-footer .flag {
+  float: left;
+  height: 20px;
+  width: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
