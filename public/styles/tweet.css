@@ -1,0 +1,128 @@
+/* Normal tweet page appearance
+ Want the same dimensions as the tweet box;
+ Add hover states for elements that require it
+*/
+
+
+.tweet {
+  width: 90%;
+  background-color: white;
+/* centred to body */
+  margin: auto;
+  margin-top: 5px;
+  padding-bottom: 1em;
+
+/* border */
+  border-color: rgba(112, 128, 144, 0.43);
+  border-style: groove;
+  border-radius: 10px;
+}
+
+.tweet:hover {
+  border-color: rgba(0, 0, 0, 0.49);
+}
+
+.tweet-header {
+  background-color: rgba(211, 211, 211, 0.09);
+}
+
+
+.tweet-header .avatar {
+  float: left;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.tweet-header .display-name {
+  padding: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0c6388;
+}
+
+.tweet:hover .tweet-header .display-name {
+  color: #0b4863;
+}
+
+.tweet-header .handle {
+  float: right;
+  text-align: right;
+  font-size: 12px;
+  color: rgba(128, 128, 128, 0.67);
+  font-weight: lighter;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.tweet:hover .tweet-header .handle {
+  color: grey;
+}
+
+.tweet .tweet-message {
+  font-weight: lighter;
+  padding: 10px;
+  color: #183965;
+}
+
+.tweet-footer {
+  border-color: rgba(112, 128, 144, 0.15);
+  border-top-style: groove;
+  border-width: thin;
+}
+
+.tweet-footer .age {
+  font-size: 10px;
+  font-weight: lighter;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.tweet-footer .interact {
+  visibility: hidden;
+  display: block;
+  padding-top: 10px;
+  padding-right: 5px;
+  height: 30px;
+  width: 18%;
+  float: right;
+}
+
+.tweet:hover .tweet-footer .interact {
+  visibility: visible;
+}
+
+
+/*<img class="like" src="/images/like.png">*/
+.tweet-footer .like {
+  float: none;
+  height: 20px;
+  width: 20px;
+}
+
+/*<img class="share" src="/images/share.png">*/
+.tweet-footer .share {
+  float: none;
+  height: 20px;
+  width: 20px;
+}
+
+/*<img class="flag" src="/images/flag.png">*/
+.tweet-footer .flag {
+  float: left;
+  height: 20px;
+  width: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

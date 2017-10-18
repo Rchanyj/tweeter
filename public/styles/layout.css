@@ -33,3 +33,7 @@ body {
   padding-top: 140px;
   padding-bottom: 1em;
  }
+
+ main #tweet-storage {
+  padding-top: 10px;
+ }
