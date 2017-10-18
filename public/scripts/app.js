@@ -134,25 +134,47 @@ $(document).ready(function () {
    // $('#tweet-storage').append($tweet); // to add it to the page so we can make
     //sure it's got all the right elements, classes, etc.
 
+
+  //Fetch tweets from /tweets page
+  function loadTweets() {
+    $.ajax({
+      method: "get",
+      url: "/tweets"
+    }).done(function(tweets) {
+      renderTweets(tweets);
+    });
+  }
+
+
+
   //Submit tweets
   $(".container form").on("submit", function(event) {
     //Prevent default submit behaviour
     event.preventDefault();
     //submit request using Ajax
     var tweetform = this;
-    //turn entry into query string
-    var entry = $(this).serialize();
-    $.ajax({
-      method: "post",
-      url: "/tweets",
-      data: entry
-    }).done(function () {
-      //reset the form
-      tweetform.reset();
-      renderTweets(data);
-    });
+  //Error checks:
+  //If empty, return empty tweet error message
+  //If char length >140, error message
+    var tweetEntry = $(".new-tweet textarea").val();
+    if (tweetEntry.length === 0) {
+      return alert("Nothing to tweet! Don't be shy!");
+    } else if (tweetEntry.length > 140) {
+      return alert("Whoops! Your tweet is too long!");
+    } else {
+      //turn entry into query string
+      var entry = $(this).serialize();
+      $.ajax({
+        method: "post",
+        url: "/tweets",
+        data: entry
+      }).done(function () {
+        //reset the form, load the tweets including the new one
+        tweetform.reset();
+        loadTweets();
+      });
+    }
   });
-
 
 
 
