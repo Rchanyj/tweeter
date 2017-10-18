@@ -1,0 +1,68 @@
+/* Normal tweet page appearance
+ Want the same dimensions as the tweet box;
+*/
+
+
+article {
+
+  width: 450px;
+  background-color: white;
+/* centred to body */
+  margin: auto;
+  padding-bottom: 1em;
+
+/* border */
+  border-color: rgba(112, 128, 144, 0.43);
+  border-style: groove;
+  border-radius: 10px;
+
+}
+
+.tweet-header {
+  background-color: rgba(211, 211, 211, 0.09);
+}
+
+
+.tweet-header .avatar {
+  float: left;
+  height: 40px;
+  width: 40px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.tweet-header .display-name {
+  padding: 5px;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #0c6388;
+}
+
+.tweet-header .handle {
+  float: right;
+  text-align: right;
+  font-size: 12px;
+  color: rgba(128, 128, 128, 0.67);
+  font-weight: lighter;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+article .tweet-message {
+  font-weight: lighter;
+  padding: 10px;
+  color: #183965;
+}
+
+.tweet-footer {
+  border-color: rgba(112, 128, 144, 0.15);
+  border-top-style: groove;
+  border-width: thin;
+}
+
+.tweet-footer .age {
+  font-size: 10px;
+  font-weight: lighter;
+  padding-top: 10px;
+  padding-left: 10px;
+}
