@@ -1,7 +1,5 @@
 /*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
+ Client-side js
  */
 
 $(document).ready(function () {
@@ -76,17 +74,6 @@ $(document).ready(function () {
       $("#tweet-storage").prepend($tweet);
     });
   }
-
-
-  //New test code:
-  //  renderTweets(data);
-
-    //var $tweet = createTweetElement(tweetData);
-
-    // Test / driver code (temporary)
-   // console.log($tweet); // to see what it looks like
-   // $('#tweet-storage').append($tweet); // to add it to the page so we can make
-    //sure it's got all the right elements, classes, etc.
 
 
   //Fetch tweets from /tweets page

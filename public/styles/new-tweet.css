@@ -1,11 +1,7 @@
-/* slightly rounded borders
-spaced by 2em on either side and centered
-grey border
-lighter grey background
+/* Tweet submitter styling
 */
 
 .new-tweet {
-
   margin-right: 2em;
   margin-left: 2em;
   margin-bottom: 2em;
