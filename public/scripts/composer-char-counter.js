@@ -18,6 +18,8 @@ $(document).ready(function () {
     //Turn counter number red if below 0:
       if (charsleft < 0) {
         counter.css("color", "red");
+      } else {
+        counter.css("color", "#244751");
       }
     });
 });
