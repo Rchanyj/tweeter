@@ -59,7 +59,7 @@ $(document).ready(function () {
             }),
             $("<div>", {
               "class": "age",
-              text: tweetData.created_at + " days ago"
+              text: moment(tweetData.created_at).fromNow()
             })
           ]
         })
