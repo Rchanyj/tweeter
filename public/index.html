@@ -56,12 +56,21 @@
       <span class="header">Tweeter</span>
       <!-- Toggle button -->
       <section class="compose-toggle">
-          <div class="compose-button"></div>
+          <div class="compose-button">Compose</div>
       </section>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+        <!-- add toggle function - toggle tweet entry box when compose button is clicked -->
+        <!-- when box slides down automatically select text area -->
+        <script>
+            $(".compose-button").on("click", function () {
+                $(".container .new-tweet").slideToggle("fast", function () {
+                    $(".new-tweet textarea").select();
+                });
+            })
+        </script>
         <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">

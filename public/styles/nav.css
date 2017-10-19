@@ -18,9 +18,51 @@
   width: 80px;
 }
 
-#nav-bar .header{
+#nav-bar .header {
   float: left;
   font-size: 2em;
   padding-left: 10px;
   line-height: 80px;
 }
+
+/* area where compose button is in (top right corner) */
+#nav-bar .compose-toggle {
+  float: right;
+  width: 15%;
+  height: 100%;
+  margin-right: 5%;
+}
+
+/*compose button */
+#nav-bar .compose-button {
+  text-align: center;
+  background-color: #e5eaec;
+  width: 110%;
+  height: 75%;
+  font-size: 1em;
+  font-weight: lighter;
+  color: #0b4863;
+
+  border: black;
+  border-style: groove;
+  border-width: thin;
+  border-radius: 5px;
+
+  margin-top: 10px;
+  padding-top: 20%;
+}
+
+/*compose button hover state*/
+#nav-bar .compose-button:hover {
+  color: black;
+  background-color: white;
+}
+
+
+
+
+
+
+
+
+
