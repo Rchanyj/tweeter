@@ -22,6 +22,9 @@
     <!-- External JS -->
     <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
+    <!-- Date formatter (moment) -->
+    <script type="text/javascript" src="https://momentjs.com/downloads/moment.js"></script>
+
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/app.js"></script>
 
@@ -54,10 +57,23 @@
     <nav id="nav-bar">
       <img class="logo" src="/images/bird.png">
       <span class="header">Tweeter</span>
+      <!-- Toggle button -->
+      <section class="compose-toggle">
+          <div class="compose-button">Compose</div>
+      </section>
     </nav>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
+        <!-- add toggle function - toggle tweet entry box when compose button is clicked -->
+        <!-- when box slides down automatically select text area -->
+        <script>
+            $(".compose-button").on("click", function () {
+                $(".container .new-tweet").slideToggle("fast", function () {
+                    $(".new-tweet textarea").select();
+                });
+            })
+        </script>
         <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form action="/tweets" method="POST">
@@ -66,27 +82,7 @@
             <span class="counter">140</span>
         </form>
         </section>
-        <main class="container" id="tweet-storage">
-            <!-- Tweet page -->
-            <article class="tweet">
-                <header class="tweet-header">
-                    <div class="handle"> @MrAhnold </div>
-                    <img class="avatar" src="/images/avatartest.png">
-                    <div class="display-name">Arnie Bui</div>
-                </header>
-                <div class="tweet-message">
-                    <p>Dai jo BUI!! HA HAHAHA HAHAHAHAHA</p>
-                </div>
-                <footer class="tweet-footer">
-                    <aside class="interact">
-                        <img class="flag" src="/images/flag.png">
-                        <img class="share" src="/images/share.png">
-                        <img class="like" src="/images/like.png">
-                    </aside>
-                    <div class="age">How many days ago?</div>
-                </footer>
-            </article>
-        </main>
+        <main class="container" id="tweet-storage"></main>
     </main>
 
   </body>
