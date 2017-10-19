@@ -95,6 +95,8 @@ $(document).ready(function () {
       method: "get",
       url: "/tweets"
     }).done(function(tweets) {
+      //clear list to prevent duplicates:
+      $("#tweet-storage").empty();
       renderTweets(tweets);
     });
   }
