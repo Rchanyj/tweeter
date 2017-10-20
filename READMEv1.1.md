@@ -6,4 +6,4 @@ Version 1.1 Changelog:
 
 3. Various minor styling changes.
 
-4. Added feature: users can now "like" tweets by clicking on the heart icon.
+4. Adding feature: users can now "like" tweets by clicking on the heart icon.

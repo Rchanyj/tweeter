@@ -52,6 +52,10 @@ $(document).ready(function () {
                 $("<img>", {
                   "class": "like",
                   src: "/images/like.png"
+                }),
+                $("<span>", {
+                  "data-type": "like_s",
+                  text: tweetData.likes
                 })
               ]
             }),
@@ -121,6 +125,24 @@ $(document).ready(function () {
       });
     }
   });
+
+  //When the heart icon is clicked, "like" is updated to 1
+  //for the tweet with the MATCHING ...?
+  //If value is 0, reset to 0.
+  /*$(".tweet-footer .like").on("click", function() {
+      var created = $(this).parent().find("")
+      $.ajax({
+        method: "post",
+        url: "/tweets",
+        //search json for matching ... object ID (for tweets already present)?
+        data: function (tweetData) {
+
+        }
+
+      }).done(function () {
+        loadTweets();
+      });
+    }) */
 
   loadTweets();
 
