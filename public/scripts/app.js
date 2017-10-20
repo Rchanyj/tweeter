@@ -96,6 +96,7 @@ $(document).ready(function () {
     event.preventDefault();
     //submit request using Ajax
     var tweetform = this;
+    var counter = $("form").find(".counter");
   //Error checks:
   //If empty, return empty tweet error message
   //If char length >140, error message
@@ -114,6 +115,8 @@ $(document).ready(function () {
       }).done(function () {
         //reset the form, load the tweets including the new one
         tweetform.reset();
+        //counter returns to 140 after submission:
+        counter[0].innerText = 140;
         loadTweets();
       });
     }

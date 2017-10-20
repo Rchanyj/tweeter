@@ -97,6 +97,11 @@
   float: none;
   height: 20px;
   width: 20px;
+  opacity: 0.6;
+}
+
+.tweet-footer .like:hover {
+  opacity: 1;
 }
 
 /*<img class="share" src="/images/share.png">*/
@@ -104,6 +109,11 @@
   float: none;
   height: 20px;
   width: 20px;
+  opacity: 0.6;
+}
+
+.tweet-footer .share:hover {
+  opacity: 1;
 }
 
 /*<img class="flag" src="/images/flag.png">*/
@@ -111,8 +121,12 @@
   float: left;
   height: 20px;
   width: 20px;
+  opacity: 0.6;
 }
 
+.tweet-footer .flag:hover {
+  opacity: 1;
+}
 
 
 
