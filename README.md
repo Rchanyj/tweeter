@@ -4,7 +4,11 @@ Tweeter is a simple, single-page Twitter clone, where you can share your daily t
 
 ## Screenshots
 
+!["Full page appearance, 100% zoom (Chrome)"](https://github.com/Rchanyj/tweeter/blob/master/docs/full-page-appearace-100%25.png?raw=true)
 
+!["Individual tweet hover state"](https://github.com/Rchanyj/tweeter/blob/master/docs/hover-state.png?raw=true)
+
+!["Tweet composer box toggle state: up"](https://github.com/Rchanyj/tweeter/blob/master/docs/tweet-composer-toggle-up.png?raw=true)
 
 ## Getting Started
 
