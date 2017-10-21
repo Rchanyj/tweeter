@@ -18,5 +18,10 @@ module.exports = function makeDataHelpers(db) {
         callback(null, tweets.sort(sortNewestFirst));
       });
     }
+
+/*
+    updateLikes: function(callback) {
+      db.collect('')
+    } */
   };
 }

@@ -132,14 +132,12 @@ $(document).ready(function () {
   /*$(".tweet-footer .like").on("click", function() {
       var created = $(this).parent().find("")
       $.ajax({
-        method: "post",
-        url: "/tweets",
+        method: "PUT",
+        url: "/tweets/" + tweetId,
         //search json for matching ... object ID (for tweets already present)?
-        data: function (tweetData) {
+        data: 'key=value&key2=value2&key3=value3'
 
-        }
-
-      }).done(function () {
+      }).done(function (results) {
         loadTweets();
       });
     }) */
