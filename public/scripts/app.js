@@ -52,6 +52,10 @@ $(document).ready(function () {
                 $("<img>", {
                   "class": "like",
                   src: "/images/like.png"
+                }),
+                $("<span>", {
+                  "data-type": "like_s",
+                  text: tweetData.likes
                 })
               ]
             }),
@@ -96,6 +100,7 @@ $(document).ready(function () {
     event.preventDefault();
     //submit request using Ajax
     var tweetform = this;
+    var counter = $("form").find(".counter");
   //Error checks:
   //If empty, return empty tweet error message
   //If char length >140, error message
@@ -114,10 +119,28 @@ $(document).ready(function () {
       }).done(function () {
         //reset the form, load the tweets including the new one
         tweetform.reset();
+        //counter returns to 140 after submission:
+        counter[0].innerText = 140;
         loadTweets();
       });
     }
   });
+
+  //When the heart icon is clicked, "like" is updated to 1
+  //for the tweet with the MATCHING ...?
+  //If value is 0, reset to 0.
+  /*$(".tweet-footer .like").on("click", function() {
+      var created = $(this).parent().find("")
+      $.ajax({
+        method: "PUT",
+        url: "/tweets/" + tweetId,
+        //search json for matching ... object ID (for tweets already present)?
+        data: 'key=value&key2=value2&key3=value3'
+
+      }).done(function (results) {
+        loadTweets();
+      });
+    }) */
 
   loadTweets();
 
