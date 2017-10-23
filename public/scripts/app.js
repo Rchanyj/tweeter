@@ -136,7 +136,7 @@ $(document).ready(function () {
       $.ajax({
         method: "PUT",
         url: "/tweets/:id"
-        //send obj id to be matched in Mongo:
+        //send obj id to be matched in Mongo db:
         data: identify.serialize();
       }).done(function () {
         loadTweets();

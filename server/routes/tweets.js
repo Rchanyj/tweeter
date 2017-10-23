@@ -42,7 +42,7 @@ module.exports = function(DataHelpers) {
     });
   });
 
-  //Route to update likes:
+  //Update likes:
 
   tweetsRoutes.put("/tweets/:id", function(req, res) {
     //Find matching tweet obj id, update likes (use Datahelpers function)

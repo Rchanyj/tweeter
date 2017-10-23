@@ -19,7 +19,7 @@ module.exports = function makeDataHelpers(db) {
       });
     }
 
-/* Update likes; find matching obj ID, update likes accordingly */
+/* Update likes; find matching obj ID, update likes */
     updateLikes: function(tweetId) {
       var tweet = db.collection("tweets").find(ObjectId(tweetId));
       var likes = tweet.likes;
