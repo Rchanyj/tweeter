@@ -56,6 +56,8 @@ $(document).ready(function () {
                 $("<span>", {
                   "data-type": "like_s",
                   text: tweetData.likes
+                  "data-type": "id"
+                  text: tweetData
                 })
               ]
             }),
@@ -127,20 +129,19 @@ $(document).ready(function () {
   });
 
   //When the heart icon is clicked, "like" is updated to 1
-  //for the tweet with the MATCHING ...?
+  //for the tweet with the MATCHING obj ID --> how to find this?
   //If value is 0, reset to 0.
-  /*$(".tweet-footer .like").on("click", function() {
-      var created = $(this).parent().find("")
+  $(".tweet-footer .like").on("click", function() {
+      var identify = $(this).parent("span").data("id"); //<--right syntax?
       $.ajax({
         method: "PUT",
-        url: "/tweets/" + tweetId,
-        //search json for matching ... object ID (for tweets already present)?
-        data: 'key=value&key2=value2&key3=value3'
-
-      }).done(function (results) {
+        url: "/tweets/:id"
+        //send obj id to be matched in Mongo:
+        data: identify.serialize();
+      }).done(function () {
         loadTweets();
       });
-    }) */
+    })
 
   loadTweets();
 

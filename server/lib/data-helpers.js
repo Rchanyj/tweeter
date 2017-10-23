@@ -19,9 +19,15 @@ module.exports = function makeDataHelpers(db) {
       });
     }
 
-/*
-    updateLikes: function(callback) {
-      db.collect('')
-    } */
+/* Update likes; find matching obj ID, update likes */
+    updateLikes: function(tweetId) {
+      var tweet = db.collection("tweets").find(ObjectId(tweetId));
+      var likes = tweet.likes;
+      if (tweet.likes === 0) {
+        tweet.likes = 1;
+      } else {
+        tweet.likes = 0;
+      };
+    }
   };
 }
